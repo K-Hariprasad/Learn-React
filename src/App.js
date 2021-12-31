@@ -1,16 +1,15 @@
-import './App.css';
-
+import "./App.css";
+import Counter from "./components/Counter";
+import { store } from "./redux/store";
+import {Provider} from 'react-redux'
 function App() {
   return (
     <div className="App">
-      Learn React!!
+      <Provider store={store}>
+        <Counter />
+      </Provider>
     </div>
   );
 }
 
 export default App;
-
-
-
-
-
